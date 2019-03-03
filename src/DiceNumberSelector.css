@@ -1,0 +1,40 @@
+.DiceNumberSelector-wrapper {
+    width: calc(4em + 8px + 0.8em);
+    display: inline-block;
+    height: calc(12em + 18px + 2em);
+}
+.DiceNumberSelector-container {
+    width: calc(4em + 8px + 0.8em);
+    display: flex;
+    height: calc(8em + 16px + 1.6em);
+    flex-flow: column;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+.DiceNumberSelector-element.d0 {
+    width: 4em;
+    height: 4em;
+    margin: auto;
+}
+
+.DiceNumberSelector-element {
+    width: 2em;
+    height: 2em;
+    text-align: center;
+    display: table;
+    border: 2px gray solid;
+    border-radius: 50%;
+    margin: 0.2em;
+    padding: 0;
+}
+.DiceNumberSelector-element div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.DiceNumberSelector-element.selected {
+    border: 2px red solid;
+
+}
