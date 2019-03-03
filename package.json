@@ -2,8 +2,10 @@
   "name": "betrayal-react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://dbalchev.github.io/betrayal-react/",
   "dependencies": {
     "@types/react": "^16.8.6",
+    "gh-pages": "^2.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
@@ -11,6 +13,8 @@
     "typescript": "^3.3.3333"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
