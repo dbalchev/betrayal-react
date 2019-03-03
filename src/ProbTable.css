@@ -1,0 +1,42 @@
+.outer {
+    display: flex;
+    overflow-x: scroll;
+    width: calc(21em + 6px);
+    scroll-snap-type: x mandatory;
+    flex-flow: row nowrap;
+}
+
+.wrapper {
+    border: solid black 1px;
+    width: 7em;
+    height: 7em;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+    scroll-snap-align: center;
+}
+
+.center {
+    align-self: center;
+    font-size: 3em;
+    width: 33%;
+}
+
+.top {
+    order: -1;
+    flex-basis: 50%;
+}
+
+.bottom {
+    order: 1;
+    flex-basis: 50%;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
