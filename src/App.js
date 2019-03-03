@@ -16,11 +16,18 @@ class App extends Component {
 
   render() {
     return (
-      <>
+      <div className='App'>
         <ProbTable goodDice={this.state.goodDice} evilDice={this.state.evilDice} />
-        <DiceNumberSelector nDice={this.state.goodDice} setNDice={nDice => this.setState({goodDice: nDice})}/>
-        <DiceNumberSelector nDice={this.state.evilDice} setNDice={nDice => this.setState({evilDice: nDice})}/>
-      </>
+        <br/>
+        <div>
+          <h1>Good dice</h1>
+          <DiceNumberSelector nDice={this.state.goodDice} setNDice={nDice => this.setState({goodDice: nDice})}/>
+        </div>
+        <div>
+          <h1>Evil dice</h1>
+          <DiceNumberSelector nDice={this.state.evilDice} setNDice={nDice => this.setState({evilDice: nDice})}/>
+        </div>
+      </div>
     );
   }
 }
