@@ -3,19 +3,23 @@ import {dice3Distribution, makeDistributionSummary, subtractDistributions, Distr
 
 import './ProbTable.css'
 
+function formatNumber(x: number): string {
+    return (100 * x).toFixed(1)
+}
+
 class PropTableEntry extends Component<{summaryEntry: DistributionSummaryEntry}> {
     render() {
         const summaryEntry = this.props.summaryEntry
         return (
             <div>
                 <div className="wrapper">
-                    <div className="top left">{summaryEntry.preSum.inclusive.toFixed(4)}</div>
-                    <div className="top right">{summaryEntry.postSum.inclusive.toFixed(4)}</div>
+                    <div className="top left">{formatNumber(summaryEntry.preSum.inclusive)}</div>
+                    <div className="top right">{formatNumber(summaryEntry.postSum.inclusive)}</div>
                     <div className="center"></div>
                     <div className="center"> {summaryEntry.n} </div>
                     <div className="center"></div>
-                    <div className="bottom left">{summaryEntry.preSum.exclusive.toFixed(4)}</div>
-                    <div className="bottom right"> {summaryEntry.postSum.exclusive.toFixed(4)}</div>
+                    <div className="bottom left">{formatNumber(summaryEntry.preSum.exclusive)}</div>
+                    <div className="bottom right"> {formatNumber(summaryEntry.postSum.exclusive)}</div>
                 </div>
             </div>
         )
